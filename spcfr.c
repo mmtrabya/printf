@@ -34,6 +34,8 @@ int (*gt_spcfr(char *str))(va_list a, prm_t *prm)
 {
 spcfr_t spcfrs[] = {
 {"c", prnt_chr},
+{"i", prnt_int},
+{"d", prnt_int},
 {"s", prnt_strng},
 {"%", prnt_prcnt},
 {"o", prnt_oct},

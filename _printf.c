@@ -15,7 +15,7 @@ if (!format || (format[0] == '%' && !format[1]))
 return (-1);
 if (format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
-for (end = (char*)format; *end; end++)
+for (end = (char *)format; *end; end++)
 {
 prms(&param, a);
 if (*end != '%')
@@ -31,7 +31,7 @@ end++;
 }
 end = gt_wdth(end, &param, a);
 end = gt_prcs(end, &param, a);
-if(gt_mod(end, &param))
+if (gt_mod(end, &param))
 end++;
 if (!gt_spcfr(end))
 sm += prnt_frm_t(st, end, param.l_mod || param.h_mod ? end - 1 : 0);
@@ -40,5 +40,5 @@ sm += gt_prnt(end, a, &param);
 }
 _ptchar(BF_FLSH);
 va_end(a);
-return(sm);
+return (sm);
 }

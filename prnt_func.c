@@ -18,6 +18,24 @@ sm += _ptchar(chara);
 return (sm);
 }
 /**
+ * prnt_int - good
+ * @a: good
+ * @prm: good
+ * Return: (0)
+ */
+int prnt_int(va_list a, prm_t *prm)
+{
+	long lg;
+
+	if (prm->l_mod)
+		lg = va_arg(a, long);
+	else if (prm->h_mod)
+		lg = (short int)va_arg(a, int);
+	else
+		lg = (int)va_arg(a, int);
+	return (prnt_num(conv(lg, 10, 0, prm), prm));
+}
+/**
 * prnt_strng - good
 * @a: good
 * @prm: good

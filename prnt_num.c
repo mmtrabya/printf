@@ -26,7 +26,7 @@ return (n);
 * @prm: good
 * Return: (0)
 */
-int prnt_num (char*string, prm_t *prm)
+int prnt_num(char *string, prm_t *prm)
 {
 unsigned int n = _strlength(string);
 int ng = (!prm->us && *string == '-');
@@ -96,14 +96,14 @@ char p_c = ' ';
 if (prm->z_f && !prm->min_f)
 p_c = '0';
 ng = ng2 = (!prm->us && *string == '-');
-if(ng && n < prm->wdth && p_c == '0' && !prm->min_f)
+if (ng && n < prm->wdth && p_c == '0' && !prm->min_f)
 string++;
 else
 ng = 0;
 if (prm->pls_f && !ng2 && !prm->us)
 i += _ptchar('+'), n++;
 else if (prm->spc_f && !ng2 && !prm->us)
-i += _ptchar(' ') ,n++;
+i += _ptchar(' '), n++;
 i += _pt(string);
 while (n++ < prm->wdth)
 i += _ptchar(p_c);
