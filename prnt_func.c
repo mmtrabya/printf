@@ -8,13 +8,13 @@
 int prnt_chr(va_list a, prm_t *prm)
 {
 char p_c = ' ';
-unsigned int pd = 1, sm = 0, char = va_arg(a, int);
+unsigned int pd = 1, sm = 0, chara = va_arg(a, int);
 if (prm->min_f)
-sm += _ptchar(char);
+sm += _ptchar(chara);
 while (pd++ < prm->wdth)
 sm += _ptchar(p_c);
 if (!prm->min_f)
-sm += _ptchar(char);
+sm += _ptchar(chara);
 return (sm);
 }
 /**
@@ -53,6 +53,8 @@ else
 sm += _pt(string);
 }
 return (sm);
+default:
+break;
 }
 /**
 * prnt_prcnt - good
@@ -85,7 +87,7 @@ if ((*string > 0 && *string < 32) || *string >= 127)
 {
 sm += _ptchar('\\');
 sm += _ptchar('x');
-hx = conv(*string, 16, 0, prm)
+hx = conv(*string, 16, 0, prm);
 if (!hx[1])
 sm += _ptchar('0');
 sm += _pt(hx);
