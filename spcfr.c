@@ -41,11 +41,11 @@ spcfr_t spcfrs[] = {
 {"o", prnt_oct},
 {"u", prnt_uns},
 {"b", prnt_bin},
-{"x", prnt_prnt_hx},
+{"x", prnt_hx},
 {"X", prnt_HX},
 {"P", prnt_addrss},
 {"S", prnt_sc},
-{"r", prnt_RV},
+{"r", prnt_rv},
 {"R", prnt_rt3},
 {NULL, NULL}
 };

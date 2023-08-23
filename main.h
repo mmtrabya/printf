@@ -9,6 +9,8 @@
 #define BF_FLSH -1
 #define NLL_STR "(null)"
 #define PRMS_I {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define CONV_LWR 1
+#define CONV_UNS 2
 /**
 * struct paramets - good
 * @us: good
@@ -60,6 +62,14 @@ char *gt_wdth(char *str, prm_t *prm, va_list a);
 int prnt_frm_t(char *strt, char *stp, char *excpt);
 int prnt_rv(va_list a, prm_t *prm);
 int prnt_rt3(va_list a, prm_t *prm);
+char *conv(long int nm, int bs, int fl, prm_t *prm);
+int prnt_uns(va_list a, prm_t *prm);
+int prnt_addrss(va_list a, prm_t *prm);
+int _isdigit(int n);
+int _strlength(char *str);
+int prnt_num(char*string, prm_t *prm);
+int prnt_num_rt(char *string, prm_t *prm);
+int prnt_num_lt(char *string, prm_t *prm);
 void prms(prm_t *prm, va_list a);
 char *gt_prcs(char *pr, prm_t *prm, va_list a);
 int _printf(const char *format, ...);
