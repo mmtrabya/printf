@@ -71,6 +71,7 @@ int prnt_num(char*string, prm_t *prm);
 int prnt_num_rt(char *string, prm_t *prm);
 int prnt_num_lt(char *string, prm_t *prm);
 int prnt_hx(va_list a, prm_t *prm);
+int prnt_HX(va_list a, prm_t *prm);
 int prnt_bin(va_list a, prm_t *prm);
 int prnt_oct(va_list a, prm_t *prm);
 void prms(prm_t *prm, va_list a);

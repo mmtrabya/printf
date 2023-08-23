@@ -42,7 +42,7 @@ spcfr_t spcfrs[] = {
 {"u", prnt_uns},
 {"b", prnt_bin},
 {"x", prnt_hx},
-{"X", prnt_hx},
+{"X", prnt_HX},
 {"P", prnt_addrss},
 {"S", prnt_sc},
 {"r", prnt_rv},
