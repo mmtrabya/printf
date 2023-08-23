@@ -47,7 +47,7 @@ lg = (unsigned short int)va_arg(a, unsigned int);
 else
 lg = (unsigned int)va_arg(a, unsigned int);
 prm->us = 1;
-return (prnt_num(conv(1, 10, CONV_UNS, prm), prm));
+return (prnt_num(conv(lg, 10, CONV_UNS, prm), prm));
 }
 /**
 * prnt_addrss - good

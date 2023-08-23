@@ -38,7 +38,7 @@ if (prm->min_f)
 {
 if (prm->prcs != UINT_MAX)
 for (n = 0; n < pd; n++)
-sm += _pt(*string++);
+sm += _ptchar(*string++);
 else
 sm += _pt(string);
 }
@@ -53,8 +53,6 @@ else
 sm += _pt(string);
 }
 return (sm);
-default:
-break;
 }
 /**
 * prnt_prcnt - good
@@ -90,7 +88,7 @@ sm += _ptchar('x');
 hx = conv(*string, 16, 0, prm);
 if (!hx[1])
 sm += _ptchar('0');
-sm += _pt(hx);
+sm += _ptchar(*hx);
 }
 else
 {

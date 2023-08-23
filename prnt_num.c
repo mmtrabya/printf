@@ -46,6 +46,7 @@ if (!prm->min_f)
 return (prnt_num_rt(string, prm));
 else
 return (prnt_num_lt(string, prm));
+}
 /**
 * prnt_num_rt - good
 * @string: good
@@ -53,6 +54,7 @@ return (prnt_num_lt(string, prm));
 *Return: (0)
 */
 int prnt_num_rt(char *string, prm_t *prm)
+{
 unsigned int i = 0, ng, ng2, n = _strlength(string);
 char p_c = ' ';
 if (prm->z_f && !prm->min_f)
@@ -87,13 +89,13 @@ return (i);
 * @prm: good
 * Return: (0)
 */
-int prnt_num_lt(char *string, prm_t prm)
+int prnt_num_lt(char *string, prm_t *prm)
 {
 unsigned int i = 0, ng, ng2, n = _strlength(string);
 char p_c = ' ';
 if (prm->z_f && !prm->min_f)
 p_c = '0';
-ng = ng2 = (!prm->ud && *string == '-');
+ng = ng2 = (!prm->us && *string == '-');
 if(ng && n < prm->wdth && p_c == '0' && !prm->min_f)
 string++;
 else
@@ -102,7 +104,7 @@ if (prm->pls_f && !ng2 && !prm->us)
 i += _ptchar('+'), n++;
 else if (prm->spc_f && !ng2 && !prm->us)
 i += _ptchar(' ') ,n++;
-i += pt(string);
+i += _pt(string);
 while (n++ < prm->wdth)
 i += _ptchar(p_c);
 return (i);
